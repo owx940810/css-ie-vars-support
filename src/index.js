@@ -143,4 +143,5 @@ var cssVarPoly = {
 
 }
 
-cssVarPoly.init()
+// need to call init function to run
+// cssVarPoly.init()
