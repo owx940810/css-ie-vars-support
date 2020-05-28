@@ -4,7 +4,7 @@
   "description": "Client-side css variables support for IE",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir dist && uglifyjs src/index.js -o dist/css-ie-vars-support.min.js -c -m",
+    "build": "gulp",
     "test": "standard"
   },
   "repository": {
