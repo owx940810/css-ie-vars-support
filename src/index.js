@@ -11,6 +11,10 @@ const cssVarPoly = {
       return
     } else {
       // edge barfs on console statements if the console is not open... lame!
+      if (!document.querySelector('body')) {
+        console.warn('<body> is not initialized yet')
+        return
+      }
       document.querySelector('body').classList.add('cssvars-polyfilled')
     }
 
@@ -142,6 +146,8 @@ const cssVarPoly = {
   }
 
 }
+
+export default cssVarPoly
 
 // need to call init function to run
 // cssVarPoly.init()
