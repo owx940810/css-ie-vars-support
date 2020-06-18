@@ -15,6 +15,9 @@ const cssVarPoly = {
         console.warn('<body> is not initialized yet')
         return
       }
+      if (document.querySelector('body').classList.contains('cssvars-polyfilled')) {
+        cssVarPoly.removePrevious()
+      }
       document.querySelector('body').classList.add('cssvars-polyfilled')
     }
 
@@ -143,6 +146,17 @@ const cssVarPoly = {
     }
 
     request.send()
+  },
+
+  // remove previous css if any exists
+  removePrevious: function () {
+    const styles = document.head.querySelectorall('.inserted'); let i
+
+    for (i = 0; i < divs.length; ++i) {
+      document.head.removeChild(divs[i])
+    }
+
+    document.querySelector('body').classList.remove('cssvars-polyfilled')
   }
 
 }
