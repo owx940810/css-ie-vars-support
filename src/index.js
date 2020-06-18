@@ -150,10 +150,10 @@ const cssVarPoly = {
 
   // remove previous css if any exists
   removePrevious: function () {
-    const styles = document.head.querySelectorall('.inserted'); let i
+    const styles = document.head.querySelectorAll('.inserted')
 
-    for (i = 0; i < divs.length; ++i) {
-      document.head.removeChild(divs[i])
+    for (let i = 0; i < styles.length; ++i) {
+      document.head.removeChild(styles[i])
     }
 
     document.querySelector('body').classList.remove('cssvars-polyfilled')

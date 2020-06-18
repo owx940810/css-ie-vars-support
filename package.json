@@ -1,6 +1,6 @@
 {
   "name": "css-ie-vars-support",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Client-side css variables support for IE",
   "main": "index.js",
   "scripts": {
